@@ -1,0 +1,151 @@
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+     /* width =border(l&r)+content+padding;  */
+ } 
+
+
+/* .parent{
+    background-color: yellow;
+    padding: 16px;
+    /* margin: 100px 34px ; top and bottom, left and right */
+    /* margin: ;    top right, bottom left */
+    
+    /* margin-left:10px; */
+    /* margin-left: 45px;
+    margin-right:78px ;
+    border: 1px solid;
+
+    span{
+        padding: 34px;
+    }
+} */ 
+
+/* .secondDiv{
+    background-color: blueviolet;
+    font-size: 34px;
+    margin-top: 45px;
+    width: 120px;
+    padding: px;
+    ;
+} */
+
+/* .parent{
+    width: 200px;
+    text-align: center;
+    background-color: blueviolet;
+}
+
+
+div{
+    align-items: center;
+}
+
+img{
+    display:block;
+    border: 1px;
+    margin: 0 auto;
+    /* /* align-items: center; * */
+    
+/* } */ 
+
+
+/* body{
+    width: 50vW;
+    height:50vH;
+    background-color: aqua;
+
+}
+ .parent{
+    height: 100px   ;
+    background-color: rgb(83, 247, 129);
+}
+
+
+.child{
+    height: 100px
+    ;
+    min-height: 300px;
+    padding: 16px 32px ;
+    overflow: scroll;
+    max-height: ;
+    background-color:rgb(168, 96, 236) ;
+} */
+ /* body{
+    height: ;
+} 
+
+
+
+.parent{
+    
+    ol{
+        padding: 10px;
+        background-color: rgba(214, 51, 179, 0.658)
+    };
+
+    ul:first-child{
+        li:nth-child(2){
+            background-color: aqua;
+            width: 50px;
+        } 
+        background-color: blanchedalmond;
+    }
+
+    
+
+    ol:last-child{
+        li:nth-child(3){
+            background-color: rgb(50, 163, 255);
+            width: 55px;
+        }
+        background-color: rgb(135, 225, 78);
+    }
+}
+
+.parent>ul{
+    background-color:red; 
+}*/ 
+
+
+/* .parent{
+    background-color: aqua;
+    display: flex;
+}
+
+.parent1{
+    justify-content: space-between;
+}
+
+.parent2{
+   justify-content: space-evenly; 
+}
+
+.parent3{
+    justify-content: space-around;
+} */
+
+
+/* .parent{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-evenly;
+
+    align-items: flex-end;
+
+}
+
+
+.child{
+    border: 1px solid red;
+    background-color: yellowgreen;
+    width: 100px;
+}
+
+.logo{
+    align-self: flex-start;
+
+} */
+

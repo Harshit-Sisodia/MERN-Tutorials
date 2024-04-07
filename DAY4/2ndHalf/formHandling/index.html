@@ -1,0 +1,27 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Handling</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div>
+        <form onsubmit="submitform(event)">
+            <label for="">First Name</label>
+            <input type="text" name="firstName" placeholder="first name" onkeydown="firstNameChange(event)"/><br><br>
+            <label for="">Last name</label>
+            <input type="text" name="lastName" placeholder="lastname"/><br><br>
+            <label for="">Age</label>
+            <input type="number" name="age" placeholder="age"/ ><br><br>
+             <label for="">Hobbies</label><br>
+            <input type="checkbox" name="hobbies" value="webd"/><label for="">web development</label><br>
+            <input type="checkbox" name="hobbies" value="football"/><label for="">football</label><br>
+            <input type="checkbox" name="hobbies" value="cricket"/><label for="">cricket</label><br><br>
+            <button>Sumbit</button>
+            <reset>Reset</reset>
+        </form>
+    </div>
+</body>
+</html>

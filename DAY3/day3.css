@@ -1,0 +1,89 @@
+/* .parent{
+    display: grid;
+    /* grid-template-columns: 50px 50px 50px; */
+    /* grid-template-columns: repeat(3, 50px); */
+    /* grid-template-columns: 1fr 1fr 1fr;    for fraction/ */
+
+    /* grid-template-rows: repeat(3,75px); */
+    /* grid-template-rows: 45px 60px 25px; */
+    /* grid-auto-rows: 50px;
+    background-color: aqua;
+
+    column-gap: 10px;
+    row-gap: 10px;
+     */
+/* } */
+/* 
+
+.child{
+    display: flex;
+    align-items: center;
+    background-color: bisque;
+    justify-content: center;
+} */
+
+
+/* 
+.header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: rgb(181, 41, 99);
+} */
+
+/* .main{
+    grid-row-start: 2;
+    grid-column-end: 4;
+    background-color: blueviolet;
+} */
+
+/* .menu{
+    grid-row-start: 2;
+    /* grid-column-end: ; */
+    /* grid-row-end: 4; */
+    /* background-color: aquamarine; */
+    /* background-color: brown; 
+}
+
+/* .footer{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: rgb(45, 239, 132);
+}  */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    min-height: 100vh;
+    min-width: 120;
+    background-color: bisque;
+}
+.parent{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5px,100px));  */
+    background-color: blue;
+    height: 100px;
+    width: 50px;
+
+    position: relative;
+    top: 100px;
+    left: 100px;
+    
+    position: fixed;
+}
+
+
+.child{
+    background-color: aquamarine;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    max-height: 100px;
+    bottom: 100px;
+} 
+
