@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "name": "internal_modules",
+  "version": "1.0.0",
+  "main": "buffer.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"npx nodemon script.js"
+  },
+  "author": "Harshit",
+  "license": "ISC",
+  "description": ""
+}
