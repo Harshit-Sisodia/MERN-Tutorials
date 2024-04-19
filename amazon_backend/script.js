@@ -18,7 +18,7 @@ mongoose.connect(dbLink)
     .then(() => console.log('Connected!'));
 
 
-
+app.use(express.json())
 app.use('/api/products', productRouter);
 
 app.listen(1164, (req, res) => {

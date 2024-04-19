@@ -22,6 +22,26 @@ const productSchema = mongoose.Schema({
     updatedAt: {
         type: Date,
         default: new Date(),
+    },
+    info:{
+        catagory: String,
+        brand: String,
+        ratingCount: Number,
+        ratingValue: Number,
+        stock: Number,
+        specificOffers: [
+            {
+                title: String,
+                description: String
+            }
+
+        ],
+        amazonServices:[
+            {
+                title: String,
+                description: String,
+            }
+        ]
     }
 })
 
