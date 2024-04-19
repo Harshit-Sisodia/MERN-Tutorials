@@ -2,19 +2,36 @@ const { response } = require("express");
 const productModel = require("../models/productsModel.js");
 
 const getAllProducts = async (req, res) => {
-  const data = await productModel.find();
+  const { sort = 'price', page =1, pageSize = 3, fields= 'title,price', ...q}=req.query;
+  const sortStr = sort.split(",").join(" ")
+  const fieldStr = fields.split(",").join(" ")
+  const skip = (page - 1) * pageSize;
+
+  let query = productModel.find(q,fieldStr)
+  query.sort(sortStr)
+  query.skip(skip)
+  query.limit(pageSize)
+  // const data = await productModel.find();
   // console.log(data);
   // console.log(req.url);
-  res.json({
-    status: "success",
-    results: data.length,
-    // message:"All Products",
-    data: {
-      products: data,
-    },
-  });
-};
+  const products = await query;
+  const totalResults = await productModel.countDocuments();
+  
 
+  res.status(200)
+  .json({
+    status: "success",
+    results: products.length,
+    skip,
+    limit: pageSize,
+    totalResults,
+    data: {
+      products
+    }
+  })
+}
+
+    
 const addProduct = async (req, res) => {
   try {
     // const (_id)
@@ -41,17 +58,30 @@ const addProduct = async (req, res) => {
 };
 
 const replaceProduct = async (req, res) => {
+  try{
   const reqId = req.params.id;
   const data = { ...req.body, reqId };
-  const result = await productModel.findOneAndReplace({ _Id: reqId }, data);
-};
+  const result = await productModel.findOneAndReplace({ _id: reqId }, data)
+
+  res.status(204)
+  .json({
+    status: "success",
+    data: result,
+  })}
+  catch(err){
+    res.status(400).json({
+      status: "failed",
+      message: err.message
+    })
+  }
+} 
 
 const updateProduct = async (req, res) => {
   try {
     const reqId = req.params.id;
     const { _id, ...reqBody } = req.body;
 
-    const result = await productModel.findOneAndReplace(
+    const result = await productModel.findOneAndUpdate(
       { _id: reqId },
       reqBody
     );
@@ -88,4 +118,4 @@ const deleteProduct = async (req, res) => {
 module.exports = {
   getAllProducts,
   addProduct,deleteProduct,updateProduct,replaceProduct
-};
+}
